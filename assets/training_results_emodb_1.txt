@@ -1,0 +1,25 @@
+SER(
+  (blstm): LSTM(80, 80, batch_first=True, dropout=0.3, bidirectional=True)
+  (mha): MultiheadAttention(
+    (out_proj): NonDynamicallyQuantizableLinear(in_features=160, out_features=160, bias=True)
+  )
+  (seq): Sequential(
+    (0): ReLU()
+    (1): Flatten(start_dim=1, end_dim=-1)
+    (2): Linear(in_features=143520, out_features=7, bias=True)
+  )
+  (dropout): Dropout(p=0.3, inplace=False)
+)
+Gradient norm:  0.0003928593075594446
+100%|██████████| 107/107 [00:03<00:00, 35.35it/s]
+Final loss:  4.172325134277344e-06
+Average weighted accuracy (WA):  0.5651927437641723
+Average accuracy (UA):  0.5607476635514018
+Category counts and scores (test set): 
+0 :  18 0.9444444444444444
+1 :  20 0.5
+2 :  12 0.16666666666666666
+3 :  14 0.42857142857142855
+4 :  18 0.2777777777777778
+5 :  9 0.8888888888888888
+6 :  16 0.75
